@@ -1,0 +1,51 @@
+.jumbotron h1{
+    color: pink;
+
+}
+
+nav > a{
+    background-color:rgb(255, 141, 11)
+}
+div.jumbotron div p a:hover{
+    color: red!important;
+
+}
+
+div.blog-post:first-of-type{
+    background-color: pink;
+}
+
+nav > a:nth-child(even){
+    font-weight: 1000;
+}
+
+div.blog-post:last-of-type{
+    background-color:rgba(66, 160, 214, 0.527);
+}
+
+aside div ol.list-unstyled.mb-0:first-of-type{
+    background: url("https://miro.medium.com/max/500/1*sqX8gTYDOWGXG6uIBB5Dpg.jpeg") no-repeat;
+    background-size: cover;
+}
+
+
+div.blog-post:nth-of-type(2) p.blog-post-meta a:first-of-type{
+    background-color: rgb(93, 233, 0);
+    font-weight:1000;
+    color: black;
+}
+
+.blog-footer p a[href*="#"]{
+    background-color: tomato;
+}
+
+footer{
+    font-size: 2rem
+}
+
+.rainbow-text{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
