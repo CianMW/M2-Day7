@@ -221,7 +221,7 @@
       <div class="row">
         <div class="col-md-8 blog-main">
           <h3 class="pb-4 mb-4 font-italic border-bottom">From the Firehose</h3>
-          <button id="color-button"></button>
+          <button id="bigButton">Click me!</Menu></button>
 
           <div class="blog-post">
             <h2 class="blog-post-title">Sample blog post</h2>
@@ -516,6 +516,21 @@
 
 
         //EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        let firstParagraphArray = document.querySelectorAll("div.blog-post p.blog-post-meta + p")
+        let bigButton = document.getElementById("bigButton")
+
+        bigButton.addEventListener("click", e =>{
+            for (let i = 0; i < firstParagraphArray.length; i++) {
+                let currentElement = firstParagraphArray[i];
+                let savedString = ""
+                
+                savedString =currentElement.innerHTML.slice(51,currentElement.length)
+                currentElement.innerHTML = savedString
+                
+            }
+        })
+
+
         //EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
         //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         //EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
