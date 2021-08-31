@@ -446,9 +446,9 @@
         <script>
  /* 
         JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to change the color of the main title
-        EX13) Write a function to change the background of the jumbotron
+       Y EX11) Write a function to add a new link into the navbar
+       Y EX12) Write a function to change the color of the main title
+       Y EX13) Write a function to change the background of the jumbotron
         EX14) Write a function to remove all the links under "Elsewhere"
         EX15) Write a function to change the column size for heading in jumbotron
         EX16) Write a function to remove the "Search" magnifying glass icon
@@ -473,17 +473,33 @@
         })
         
         
-        
+        // EX12) Write a function to change the color of the main title
         document.querySelector("div.blog-main > h3").addEventListener("click", function() {
             document.querySelector("div.blog-main > h3").style.color = "green";
           });
         
+          // Y EX13) Write a function to change the background of the jumbotron
         const jumbotron =  document.querySelector("div .jumbotron")
           jumbotron.addEventListener("click", e => {
         jumbotron.classList.remove("bg-dark") 
            document.querySelector("div.jumbotron").style.backgroundColor="green"
             
           })
+
+          // EX14) Write a function to remove all the links under "Elsewhere"
+          const onClickLocation =  document.querySelector(".blog-sidebar div:nth-child(3) > ol")
+          const ElsewhereLinkLocation =  document.querySelectorAll(".blog-sidebar div:nth-child(3) > ol > li a")
+          onClickLocation.addEventListener("click", e =>{
+              for (let i = 0; i < ElsewhereLinkLocation.length; i++) {
+                  const currentLink = ElsewhereLinkLocation[i];
+                  currentLink.remove()
+                  
+              }
+          })
+
+
+
+
 
 
 
