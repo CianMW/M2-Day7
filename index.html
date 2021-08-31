@@ -383,8 +383,7 @@
               href="#"
               tabindex="-1"
               aria-disabled="true"
-              >Newer</a
-            >
+              >Newer</a>
           </nav>
         </div>
         <!-- /.blog-main -->
@@ -532,7 +531,24 @@
 
 
         //EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+
+        let newerButton = document.querySelector("nav a.btn:nth-child(2)")
+        document.querySelector("nav a.btn:nth-child(2)").classList.remove("disabled")
+        newerButton.addEventListener("click", e=>{
+
+            let newDivNode = document.createElement("div")
+            newDivNode.classList.add("blog-post")
+            let newTitleNode = document.createElement("h2")
+            newTitleNode.classList.add("blog-post-title")
+            newTitleNode.innerHTML = "A New Blog Post"
+            newDivNode.appendChild(newTitleNode)
+            document.querySelector("div.blog-main").appendChild(newDivNode)
+        })
+
         //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+        
+
+
         //EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
 
