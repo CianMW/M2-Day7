@@ -486,7 +486,7 @@
             
           })
 
-          // EX14) Write a function to remove all the links under "Elsewhere"
+          // Y EX14) Write a function to remove all the links under "Elsewhere"
           const onClickLocation =  document.querySelector(".blog-sidebar div:nth-child(3) > ol")
           const ElsewhereLinkLocation =  document.querySelectorAll(".blog-sidebar div:nth-child(3) > ol > li a")
           onClickLocation.addEventListener("click", e =>{
@@ -499,7 +499,14 @@
 
 
 
+         // EX15) Write a function to change the column size for heading in jumbotron
 
+         const jumbotronLocation = document.querySelector("div .jumbotron")
+         const jumbotronColumnLocation = document.querySelector("div.jumbotron div")
+          jumbotronLocation.addEventListener("click", e =>{
+              jumbotronColumnLocation.classList.remove("col-md-6")
+              jumbotronColumnLocation.classList.add("col-md-12")
+          })
 
 
 
