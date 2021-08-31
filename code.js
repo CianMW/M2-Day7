@@ -10,6 +10,13 @@ const addNavbarLink = () =>{
 
 
 
-document.getElementById("color-button").addEventListener("click", function() {
+document.querySelector("div.blog-main > h3").addEventListener("click", function() {
     document.querySelector("div.blog-main > h3").style.color = "green";
   });
+
+const jumbotron =  document.querySelector("div .jumbotron")
+  jumbotron.addEventListener("click", e => {
+jumbotron.classList.remove("bg-dark") 
+   document.querySelector("div.jumbotron").style.backgroundColor="green"
+    
+  })

@@ -443,8 +443,8 @@
       </p>
     </footer>
 
-    <script>
-      /*
+        <script>
+ /* 
         JS Exercises
         EX11) Write a function to add a new link into the navbar
         EX12) Write a function to change the color of the main title
@@ -456,8 +456,39 @@
         EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-    */
-    </script>
-    <script src="code.js" type="javascript"></script>
+   */
+  
+
+
+
+                // Add link to nav bar
+ document.querySelector("nav.nav").addEventListener("click", e  =>{
+            let newNavNode = document.createElement("a")
+            newNavNode.classList.add("p-2")
+            newNavNode.classList.add("text-muted")
+            newNavNode.setAttribute("href", "#")
+            newNavNode.innerHTML = "EXTRA!"
+        
+            document.querySelector("nav").appendChild(newNavNode)
+        })
+        
+        
+        
+        document.querySelector("div.blog-main > h3").addEventListener("click", function() {
+            document.querySelector("div.blog-main > h3").style.color = "green";
+          });
+        
+        const jumbotron =  document.querySelector("div .jumbotron")
+          jumbotron.addEventListener("click", e => {
+        jumbotron.classList.remove("bg-dark") 
+           document.querySelector("div.jumbotron").style.backgroundColor="green"
+            
+          })
+
+
+
+    </script> 
+
+   // <script type="javascript/text"></script>
   </body>
 </html>
