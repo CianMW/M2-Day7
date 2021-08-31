@@ -377,10 +377,9 @@
           <!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-primary" >Older</a>
             <a
               class="btn btn-outline-secondary disabled"
-              href="#"
               tabindex="-1"
               aria-disabled="true"
               >Newer</a>
@@ -532,8 +531,8 @@
 
         //EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
 
-        let newerButton = document.querySelector("nav a.btn:nth-child(2)")
-        document.querySelector("nav a.btn:nth-child(2)").classList.remove("disabled")
+        let newerButton = document.querySelectorAll("nav a.btn")[1]
+        document.querySelectorAll("nav a.btn")[1].classList.remove("disabled")
         newerButton.addEventListener("click", e=>{
 
             let newDivNode = document.createElement("div")
@@ -542,14 +541,30 @@
             newTitleNode.classList.add("blog-post-title")
             newTitleNode.innerHTML = "A New Blog Post"
             newDivNode.appendChild(newTitleNode)
-            document.querySelector("div.blog-main").appendChild(newDivNode)
+            document.querySelector(".blog-main").appendChild(newDivNode)
         })
 
         //EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        
+        let olderButton = document.querySelector("nav a.btn.btn-outline-primary")
+        let blogPostArray = document.querySelectorAll("div.blog-post")
+        olderButton.addEventListener("onclick", e =>{
+            document.querySelectorAll("div.blog-post")[blogPostArray.length-1].remove()
+        })
 
 
         //EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+        let authorArray = document.querySelectorAll(".blog-post-meta")
+        for (let i = 0; i < authorArray.length; i++) {
+            const currentElement = authorArray[i];
+            currentElement.setAttribute("onmouseenter", "alert()")
+        }
+        const alertTime = () =>{
+            alert("woohoo!")
+        }
+        //test.addEventListener("mouseenter", function( event ) {
+        // highlight the mouseenter target
+      //  event.target.style.color = "purple";
+
 
 
     </script> 
